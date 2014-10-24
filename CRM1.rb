@@ -62,16 +62,16 @@ def modify_contact
 	puts contacts_list
 
 	selected = gets.chomp
-	puts "Choose a first name:"
+	puts "Choose a first name"
 	@rolodex.contacts[selected].first_name = gets.chomp
 
-	###add more attributes
+
+### add other attributes
+
+
 end
 
 
-
-
-end
 
 
 
@@ -107,28 +107,15 @@ def delete_contact
 
 
 
-	def display_contact
-		puts "Who are you looking for?"
-		specific_contact = gets.chomp
-		search = @rolodex.contacts.select do |contact|
-			p contact: contact
-			p contact_first_name: contact.first_name
-			contact.first_name.include?(specific_contact) ||
-			contact.last_name.include?(specific_contact)
-		end
-
-		if !search.empty?
-			puts "Searches matching #{specific_contact} are:"
-			search.each do |contact|
-				puts "#{contact.first_name}, #{contact.last_name}, #{contact.email}, #{contact.note}"
-			end
-		else
-			puts "Can't find that contact"
-		end
-	end
-
-
-
+def display_contact
+	puts "who are you looking for?"
+	specific_contact = gets.chomp
+	@rolodex
+	if @rolodex.include?(specific_contact) == true
+		puts "contact there!"
+	else
+		puts "not here"
+end
 end
 
 
