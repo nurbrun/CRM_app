@@ -19,8 +19,44 @@ class Rolodex
 			end
 			
 		end
+		nil
 	end
 
+	def search_contact_by_first_name (name)
+
+		array = []
+
+		@contacts.each do |contact|
+
+
+			if contact.first_name == name 
+
+			array << contact
+
+			end
+
+		end
+
+		return array
+
+
+	end
+
+
+	def search_contact_by_id (id)
+
+		array = []
+
+		@contacts.each do |contact|
+
+
+			if contact.id == id
+			array << contact
+
+			end
+		end
+		return array
+	end
 
 
 end
